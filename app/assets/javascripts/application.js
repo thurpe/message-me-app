@@ -15,8 +15,13 @@
 //= require activestorage
 //= require turbolinks
 //= require semantic-ui
+//= require semantic-ui/modal
+//= require semantic-ui/dropdown
 //= require_tree .
 
 $(document).on('turbolinks:load', function(){
-    $('ui.dropdown').dropdown();
+    $('.dropdown').dropdown();
+    $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
 })
